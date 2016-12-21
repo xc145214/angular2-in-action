@@ -28,9 +28,11 @@ import { Article } from './article';
         </button>
     </form>
 
-   <hr/>
+    <hr/>
     <div class="ui grid posts">
-        <reddit-article>
+       <reddit-article
+        *ngFor="let article of articles"
+        [article]="article">
         </reddit-article>
     </div>
     `
@@ -43,6 +45,11 @@ export class AppComponent {
     constructor() {
         this.name = "Angular";
         this.names = ['Ari', 'Carlos', 'Felipe', 'Nate'];
+        this.articles = [
+            new Article('Angular 2', 'http://angular.io', 3),
+            new Article('Fullstack', 'http://fullstack.io', 2),
+            new Article('Angular Homepage', 'http://angular.io', 1)
+        ];
     }
 
     addArticle(title:HTMLInputElement,link:HTMLInputElement): void{

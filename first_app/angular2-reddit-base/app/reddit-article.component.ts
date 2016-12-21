@@ -11,7 +11,7 @@ import { Article } from './article';
     host:{
         class:'row'
     },
-
+    inputs: ['article'],
     /**
      * creating the reddit-article template
      */
