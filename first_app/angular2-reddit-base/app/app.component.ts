@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
     selector: 'my-app',
     template: `
@@ -26,6 +27,12 @@ import { Component } from '@angular/core';
             Submit link
         </button>
     </form>
+
+
+    <div class="ui grid posts">
+        <reddit-article>
+        </reddit-article>
+    </div>
     `
 })
 export class AppComponent {
