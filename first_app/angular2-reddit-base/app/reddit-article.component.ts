@@ -30,6 +30,9 @@ import { Article } from './article';
         <a class="ui large header" href="{{ article.link }}">
             {{ article.title }}
         </a>
+        
+        <!-- right here -->
+        <div class="meta">{{ article.domain() }}</div>
         <ul class="ui big horizontal list voters">
             <li class="item">
                 <a href (click)="voteUp()">
