@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { Article } from './article';
 
 @Component({
     selector: 'my-app',
@@ -28,7 +28,7 @@ import { Component } from '@angular/core';
         </button>
     </form>
 
-
+   <hr/>
     <div class="ui grid posts">
         <reddit-article>
         </reddit-article>
@@ -38,6 +38,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
     name: string;
     names: string[];
+    articles:Article[];
 
     constructor() {
         this.name = "Angular";
