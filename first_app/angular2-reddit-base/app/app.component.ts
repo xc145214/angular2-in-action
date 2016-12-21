@@ -61,6 +61,7 @@ export class AppComponent {
         link.value = '';
     }
 
+
     sortedArticles():Article[]{
         return  this.articles.sort((a: Article, b: Article) => b.votes - a.votes);
     }
